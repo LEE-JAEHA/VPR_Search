@@ -1,0 +1,35 @@
+/* static/style.css */
+
+body {
+    background-color: #173960e6;
+    padding: 20px;
+}
+
+h1, h2 {
+    color : whitesmoke;
+    /* color: #007bff; */
+}
+
+form {
+    margin-bottom: 20px;
+}
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #053c73;
+}
+
+.image-card {
+    background-color: #053c73;
+    margin: 10px;
+    text-align: center;
+}
+
+.image-card img {
+    background-color: #053c73;
+    max-width: 200px;
+    max-height: 200px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
