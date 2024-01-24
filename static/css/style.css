@@ -1,12 +1,12 @@
 /* static/style.css */
 
 body {
-    background-color: #173960e6;
+    background-color: white;
     padding: 20px;
 }
 
 h1, h2 {
-    color : whitesmoke;
+    color : rgb(217, 177, 32);
     /* color: #007bff; */
 }
 
@@ -17,17 +17,17 @@ form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: #053c73;
+    /* background-color: #053c73; */
 }
 
 .image-card {
-    background-color: #053c73;
+    /* background-color: #053c73; */
     margin: 10px;
     text-align: center;
 }
 
 .image-card img {
-    background-color: #053c73;
+    /* background-color: #053c73; */
     max-width: 200px;
     max-height: 200px;
     border: 1px solid #dee2e6;
