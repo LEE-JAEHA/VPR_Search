@@ -1,0 +1,92 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyTorch Deep Learning App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        input[type="file"] {
+            display: none; /* 기존 파일 선택 버튼을 숨김 */
+        }
+    
+        .custom-file-upload {
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+            background-color: #4285f4;
+            color: white;
+            border-radius: 5px;
+        }
+    
+        /* 스타일링이 적용된 파일 찾기 버튼을 클릭할 때, 실제 input[type="file"]을 클릭하도록 함 */
+        .custom-file-upload:hover {
+            background-color: #2559c3;
+        }
+    
+        input[type="file"]:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>PyTorch Deep Learning App</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <label class="custom-file-upload">
+                <input type="file" name="file" accept="image/*" required>
+                파일 찾기
+            </label>
+            <button type="submit">Predict</button>
+        </form>
+        {% if result is defined %}
+            <p>결과: {{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
