@@ -9,6 +9,7 @@
     <title>Flask Deep Learning Example</title>
     <style>
         /* 전체 페이지 스타일 */
+        /* 전체 페이지 스타일 */
         body {
             display: flex;
             justify-content: center;
@@ -16,8 +17,12 @@
             flex-direction: column;
             margin: 0;
             background-color: #f8f8f8;
-            overflow: hidden; /* 스크롤 제거 */
+            overflow-y: auto; /* 세로 스크롤을 허용 */
+            padding: 20px; /* 페이지 내용과 경계 간격을 조절 */
+            background-color: bisque;
         }
+
+/* ... (이후 코드) ... */
 
         /* 웹페이지 제목 스타일 */
         h1 {
@@ -166,8 +171,31 @@
 
         // 페이지 새로고침 및 이미지 초기화
         function reloadPage() {
-            location.reload();
+            var fileInput = document.getElementById('file');
+            var imagePreview = document.getElementById('image-preview');
+            var previewImage = document.getElementById('preview-image');
+        
+            // 이미지 미리보기를 초기화하지 않고 파일 선택 input만 초기화
+            fileInput.value = '';
+        
+            // 예측 결과 및 매칭 데이터 초기화 (선택적으로 추가)
+            var resultElement = document.querySelector('#result');
+            var gridDataElement = document.querySelector('#grid-data');
+            if (resultElement) {
+                resultElement.innerHTML = '';
+            }
+            if (gridDataElement) {
+                gridDataElement.innerHTML = '';
+            }
+        
+            // Predict 버튼을 눌렀을 때는 이미지 미리보기를 초기화하지 않음
+            if (imagePreview && previewImage) {
+                imagePreview.style.display = 'block';
+            }
         }
+        
+        
+
     </script>
 </body>
 </html>
